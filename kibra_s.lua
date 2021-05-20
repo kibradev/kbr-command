@@ -35,9 +35,9 @@ RegisterCommand("mesleğim", function(source)
   local meslek = kisi.job.label 
   local seviye = kisi.job.grade_label
   if meslek == "Unemployed" then 
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'warning', text = 'Bir işte çalışmıyorsunuz', length = 5000})  
+    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Bir işte çalışmıyorsunuz', length = 5000})  
   else 
-  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'warning', text = 'Mesleğin: ' .. meslek .. ' - ' .. seviye, length = 5000})  
+  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Mesleğin: ' .. meslek .. ' - ' .. seviye, length = 5000})  
   end
 end)
 
@@ -63,14 +63,14 @@ TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success',
 end 
 end)
 
-RegisterCommand("bosphcoin", function(source)
+RegisterCommand("karapara", function(source)
   local _source = source
   local kisi = ESX.GetPlayerFromId(_source)
-  local bosph = getBlackMoneyFromUser(_source)
-  if bosph == 0 then 
-  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'black', text = 'Üzerinizde bosphcoin bulunmamaktadır.', length = 5000})  
+  local karapara = getBlackMoneyFromUser(_source)
+  if karapara == 0 then 
+  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Üzerinizde Karapara bulunmamaktadır.', length = 5000})  
   else 
-  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Toplam Bosphcoin:  '..bosph, length = 5000})  
+  TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Toplam Bosphcoin:  '..karapara, length = 5000})  
   end 
   end)
 
